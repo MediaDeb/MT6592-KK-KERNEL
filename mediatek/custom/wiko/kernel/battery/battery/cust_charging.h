@@ -8,7 +8,7 @@
 
 /* Battery Temperature Protection */
 #define MTK_TEMPERATURE_RECHARGE_SUPPORT
-#define MAX_CHARGE_TEMPERATURE 60         //modify by alik SWDAO-107 
+#define MAX_CHARGE_TEMPERATURE 60         //modify by alik SWDAO-107
 #define MAX_CHARGE_TEMPERATURE_MINUS_X_DEGREE	47
 #define MIN_CHARGE_TEMPERATURE  0
 #define MIN_CHARGE_TEMPERATURE_PLUS_X_DEGREE	6
@@ -18,12 +18,12 @@
 
 /* Linear Charging Threshold */
 #define V_PRE2CC_THRES	 		3400	//mV
-#define V_CC2TOPOFF_THRES		4050
-#define RECHARGING_VOLTAGE      4110
+#define V_CC2TOPOFF_THRES		3750
+#define RECHARGING_VOLTAGE      3810
 #define CHARGING_FULL_CURRENT    150	//mA
 
 /* Charging Current Setting */
-//#define CONFIG_USB_IF 						   
+//#define CONFIG_USB_IF
 #define USB_CHARGER_CURRENT_SUSPEND			0		// def CONFIG_USB_IF
 #define USB_CHARGER_CURRENT_UNCONFIGURED	CHARGE_CURRENT_70_00_MA	// 70mA
 #define USB_CHARGER_CURRENT_CONFIGURED		CHARGE_CURRENT_500_00_MA	// 500mA
@@ -38,12 +38,12 @@
 
 
 /* Precise Tunning */
-#define BATTERY_AVERAGE_DATA_NUMBER	3	
+#define BATTERY_AVERAGE_DATA_NUMBER	3
 #define BATTERY_AVERAGE_SIZE 	30
 
 /* charger error check */
 //#define BAT_LOW_TEMP_PROTECT_ENABLE         // stop charging if temp < MIN_CHARGE_TEMPERATURE
-#define V_CHARGER_ENABLE 0				// 1:ON , 0:OFF	
+#define V_CHARGER_ENABLE 0				// 1:ON , 0:OFF
 #define V_CHARGER_MAX 6500				// 6.5 V
 #define V_CHARGER_MIN 4400				// 4.4 V
 
@@ -72,7 +72,7 @@
 #define JEITA_TEMP_BELOW_NEG_10_CV_VOLTAGE		BATTERY_VOLT_03_900000_V
 
 /* For JEITA Linear Charging only */
-#define JEITA_NEG_10_TO_POS_0_FULL_CURRENT  120	//mA 
+#define JEITA_NEG_10_TO_POS_0_FULL_CURRENT  120	//mA
 #define JEITA_TEMP_POS_45_TO_POS_60_RECHARGE_VOLTAGE  4000
 #define JEITA_TEMP_POS_10_TO_POS_45_RECHARGE_VOLTAGE  4100
 #define JEITA_TEMP_POS_0_TO_POS_10_RECHARGE_VOLTAGE   4000
@@ -95,4 +95,4 @@
 #define FAN5405_BUSNUM 1
 #endif
 
-#endif /* _CUST_BAT_H_ */ 
+#endif /* _CUST_BAT_H_ */
